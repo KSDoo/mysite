@@ -1,0 +1,144 @@
+/* Common setting */
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+html {
+  font-size: 15px;/* 1rem === 15px */
+  line-height: 1.6;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  color: #181818;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  vertical-align: text-top;
+}
+
+a {
+  color: #181818;
+  text-decoration: none;
+}
+/* header */
+
+
+header {
+  height: 520px;
+  background-image: url('images/bg-header2.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+/* main */
+.main {
+  margin-bottom: 200px;
+}
+.post__title {
+  font-family: 'Kopub Batang', serif;
+  font-size: 3.2rem;
+  line-height: 1.25;
+}
+
+.post__text {
+  line-height: 1.6;
+}
+
+.post__date {
+  font-family: 'Kopub Batang', serif;
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 2;
+  color: #8d8d8d;
+}
+
+.post__item:nth-child(2n){
+  text-align: right;
+}
+
+.row {
+  margin-bottom: 220px;
+}
+
+/* footer */
+.footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:200px;
+   width:100%;
+   background:white;
+   color: white;
+   border: 10px;
+
+}
+
+.name {
+  margin: 0;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 3;
+}
+
+.name a {
+  font-family: inherit;
+  color: black;
+}
+
+.btn__email {
+  font-size: 0.7rem;
+}
+
+
+.navbar .navbar-nav .nav-item .nav-link,
+.navbar .navbar-toggler{
+  font-size: 0.933333rem;
+  font-weight: 700;
+  line-height: 1.43;
+  letter-spacing: 0.21em;
+  color: #181818;
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
+.nav-item .nav-link {
+  font-family: 'Nanum Gothic', sans-serif;
+  color: #53403F;
+  text-align: center;
+}
+
+.nav-item img {
+  display: block;
+  margin: auto;
+  height: 80px;
+  width: auto;
+}
+
+@media screen and (max-width: 510px){
+
+  .name {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .btn__email {
+    font-size: 0.5rem;
+  }
+  .row .post__title {
+    font-size: 2.3rem;
+  }
+  .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 0.8rem;
+  }
+  .nav-item img {
+    height: 40px;
+    width: auto;
+  }
+}

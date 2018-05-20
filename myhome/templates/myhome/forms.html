@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/kopubbatang.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- custom -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myhome/stylesheet.css' %}" type="text/css">
+
+
+    <title>자기소개</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="두경서">
+    <meta property="og:url" content="http://likelion.ubal.kr">
+    <meta property="og:description" content="안녕하세요. 두경서입니다.">
+    <meta property="og:image" content="http://likelion.ubal.kr/images/bg-header2.jpg">
+  </head>
+  <body>
+    <!-- header -->
+    <header id="header" class="header mb-5">
+      <div class="layer"></div>
+    </header>
+    <!-- header -->
+    <!-- main -->
+    <main class="main">
+      <div class="container">
+        <section class="post">
+          <form method="POST" class="post-form">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" class="save btn btn-default">Save</button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <!-- main -->
+    <footer class="footer py-5">
+      <!-- nav -->
+      <nav class="navbar navbar-expand navbar-light ml-4-md">
+        <div class="brand">
+          <h1 class="name">
+            <a href="#header">두경서</a>
+            </h1>
+          <button type="button" class="btn btn-outline-secondary btn__email">khandoo@unist.ac.kr</button>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active px-2">
+              <a class="nav-link" href="{% url 'index' %}"><img src={% static 'myhome/images/1.png' %}><a>
+              <a class="nav-link" href="{% url 'index' %}">입학 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href='{% url 'board' %}'><img src={% static 'myhome/images/3.png' %}><a>
+              <a class="nav-link" href='{% url 'board' %}'>게시판</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href='{% url 'new' %}'><img src={% static 'myhome/images/2.png' %}><a>
+              <a class="nav-link" href='{% url 'new' %}'>글쓰기</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- nav -->
+    </footer>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
